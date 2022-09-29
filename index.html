@@ -11,9 +11,8 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
-    <link rel="stylesheet" href="css/main.css" />
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/main.css" />
 
     <title>Frontend Mentor | Base Apparel coming soon page</title>
   </head>
@@ -40,12 +39,13 @@
           </p>
 
           <div class="input">
-            <input type="email" placeholder="Email Address" />
-            <button>
+            <input type="email" placeholder="Email Address" id="email" />
+            <button onclick="validateEmail()">
               <img src="images/icon-arrow.svg" alt="Arrow Button" />
             </button>
-            <p id="message"></p>
           </div>
+          <p id="message1" style="color: green"></p>
+          <p id="message2" style="color: red"></p>
         </div>
       </div>
     </main>
