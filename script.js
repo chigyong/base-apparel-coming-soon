@@ -1,12 +1,15 @@
-function validateEmail(){
+let email = document.getElementById("email");
+let dangerIcon = document.getElementById('danger-button');
+let dangerText = document.getElementById("danger-text");
+let form = document.getElementById("form");
 
-    var input = document.getElementById('email').value;
-    
-
-    if(input == '@') {
-        document.getElementById('message1').innerHTML = "Valid Email";
+form.addEventListener("submit", (e) => {
+    if (email.validity.typeMismatch) {
+        e.preventDefault();
+        dangerIcon.style.opacity = 1;
+        dangerText.style.opacity = 1;
+    } else {
+        dangerIcon.style.opacity = 0;
+        dangerText.style.opacity = 0;
     }
-    else {
-        document.getElementById('message2').innerHTML = "Invalid Email!";
-    }
-}
+})
